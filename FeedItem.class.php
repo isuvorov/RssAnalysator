@@ -34,8 +34,14 @@
       private $published;
       private $updated;
       private $rate;
-
+  
       public function __construct ( $data ) {
+          $this->setFromObj( $data );
+          //$this->data = $data;
+          //return $this->data->summary->content;
+      }
+
+      public function setFromJsonObj ( $data ) {
           $this->id = $data->id;
           $this->href = $data->alternate[0]->href;
           $this->title = $data->title;
@@ -44,14 +50,13 @@
           $this->published = $data->published;
           $this->updated = $data->updated;
           $this->rate = 0;
-          //$this->data = $data;
-          //return $this->data->summary->content;
       }
 
       public function getId () {
           return substr( $this->id, strlen( 'tag:google.com,2005:reader/item/' ) );
           return $this->id;
       }
+
       public function getRate () {
           return $this->rate;
       }
@@ -73,7 +78,7 @@
       }
 
       public function getDate () {
-          return  $this->published ;
+          return $this->published;
       }
 
       public function getIcon () {
@@ -166,4 +171,9 @@
 
       //public function addItems ( IFeedItem ifi )
   }
+
+  class EditableFeedItem extends FeedItem {
+      
+  }
+
 ?>

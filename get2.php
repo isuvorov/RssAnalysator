@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -44,9 +43,8 @@
 </html>
 
 
-
+http://www.fyneworks.com/jquery/star-rating/#tab-Testing
 <script>
-    var ar = [{"href":"http:\/\/www.free-lance.ru\/projects\/?pid=880901","weight":47,"rate":0,"title":"\u0423\u0434\u0430\u043b\u0451\u043d\u043d\u044b\u0439 \u043c\u0435\u043d\u0435\u0434\u0436\u0435\u0440 \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0438 \u0421\u0430\u0439\u0442\u043e\u0432 (\u0411\u044e\u0434\u0436\u0435\u0442: 230  \u0440\u0443\u0431.)","date":"07\/10\/2011 18:35:17","content":"\u041e\u0431\u044f\u0437\u0430\u043d\u043d\u043e\u0441\u0442\u0438:                    \n\u041f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0430 \u0441\u0430\u0439\u0442\u043e\u0432:                     \n\u2022 \u0418\u0441\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u043e\u0448\u0438\u0431\u043e\u043a \u043d\u0430 \u0441\u0430\u0439\u0442\u0430\u0445: \u0438\u0441\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u043e\u0448\u0438\u0431\u043e\u043a \u0432 \u043e\u043f\u0438\u0441\u0430\u043d\u0438\u044f\u0445, \u0437\u0430\u043c\u0435\u043d\u0430 \u043d\u0435\u0440\u0430\u0431\u043e\u0442\u0430\u044e\u0449\u0438\u0445 \u0441\u0441\u044b\u043b\u043e\u043a, \u0437\u0430\u043c\u0435\u043d\u0430 \u0441\u0435\u0440\u0442\u0438\u0444\u0438\u043a\u0430\u0442\u043e\u0432, \u043a\u0430\u0440\u0442\u0438\u043d\u043e\u043a, \u043a\u043e\u0440\u0440\u0435\u043a\u0442\u0438\u0440\u043e\u0432\u043a\u0430 \u0441\u043f\u0435\u0446\u0440\u0430\u0437\u043c\u0435\u0449\u0435\u043d\u0438\u044f \u0442\u043e\u0432\u0430\u0440\u043e\u0432;                     \n\u2022 \u0418\u0441\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u0442\u0435\u0445\u043d\u0438\u0447\u0435\u0441\u043a\u0438\u0445 \u043e\u0448\u0438\u0431\u043e\u043a;                    \n\u2022 \u041e\u0431\u0440\u0430\u0431\u043e\u0442\u043a\u0430 \u0436\u0430\u043b\u043e\u0431, \u043f\u0440\u043e\u0441\u044c\u0431 \u0438 \u0432\u043e\u043f\u0440\u043e\u0441\u043e\u0432 \u0441\u043e\u0442\u0440\u0443\u0434\u043d\u0438\u043a\u043e\u0432 \u043a\u043e\u043c\u043f\u0430\u043d\u0438\u0438 \u043f\u043e \u043f\u043e\u0432\u043e\u0434\u0443 \u0441\u0430\u0439\u0442\u043e\u0432;                    \n\u2022 \u041f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0430 \u0440\u0430\u0431\u043e\u0442\u043e\u0441\u043f\u043e\u0441\u043e\u0431\u043d\u043e\u0441\u0442\u0438 \u0441\u0430\u0439\u0442\u043e\u0432: \u043f\u0438\u0441\u044c\u043c\u0430 \u0445\u043e\u0441\u0442\u0435\u0440\u0443, \u0437\u0432\u043e\u043d\u043a\u0438 \u0432 \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0443 \u0434\u0432\u0438\u0436\u043a\u0430 \u0438 \u043f\u0440\u043e\u0447\u0435\u0435, \u0441\u0432\u044f\u0437\u0430\u043d\u043d\u043e\u0435 \u0441 \u043a\u043e\u0440\u0440\u0435\u043a\u0442\u043d\u043e\u0439 \u0440\u0430\u0431\u043e\u0442\u043e\u0439 \u0441\u0430\u0439\u0442\u043e\u0432;                    \n\u2022 \u0423\u0434\u0430\u043b\u0435\u043d\u0438\u0435 \u0438 \u043f\u0435\u0440\u0435\u043c\u0435\u0449\u0435\u043d\u0438\u0435 \u043a\u0430\u0442\u0430\u043b\u043e\u0433\u043e\u0432 \u0438 \u043f\u043e\u0434\u043a\u0430\u0442\u0430\u043b\u043e\u0433\u043e\u0432, \u0441\u043e\u0437\u0434\u0430\u043d\u0438\u0435 \u0440\u0430\u0437\u0434\u0435\u043b\u043e\u0432 \u0438 \u0441\u0442\u0440\u0430\u043d\u0438\u0446, \u0441\u043e\u0437\u0434\u0430\u043d\u0438\u0435 \u0438 \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0430 \u0444\u0438\u043b\u044c\u0442\u0440\u043e\u0432.                     \n\u2022 \u041f\u043e\u0434\u0433\u043e\u0442\u043e\u0432\u043a\u0430 \u0440\u0435\u0437\u0435\u0440\u0432\u043d\u043e\u0439 \u043a\u043e\u043f\u0438\u0438 \u0432\u0441\u0435\u0445 \u0441\u0430\u0439\u0442\u043e\u0432 \u0441 \u0440\u0435\u0433\u0443\u043b\u044f\u0440\u043d\u043e\u0441\u0442\u044c\u044e \u0440\u0430\u0437 \u0432 \u043c\u0435\u0441\u044f\u0446.                    \n\u2022 \u041e\u043f\u0435\u0440\u0430\u0442\u0438\u0432\u043d\u043e\u0435 \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u0435 \u0446\u0435\u043d \u043d\u0430 \u0441\u0430\u0439\u0442\u0435 (\u0432 \u0442\u0435\u0447\u0435\u043d\u0438\u0438 0,5-1 \u0447\u0430\u0441\u0430).                    \n\u2022 \u0423\u0441\u0442\u0440\u0430\u043d\u0435\u043d\u0438\u0435 \u043e\u0448\u0438\u0431\u043e\u043a \u0432 YML \u0444\u043e\u0440\u043c\u0435 \u043f\u0440\u0438 \u0438\u0445 \u0432\u043e\u0437\u043d\u0438\u043a\u043d\u043e\u0432\u0435\u043d\u0438\u0438.                    \n\u2022 \u0423\u0441\u0442\u0440\u0430\u043d\u0435\u043d\u0438\u0435 \u043e\u0448\u0438\u0431\u043e\u043a \u0432 \u0440\u0430\u0431\u043e\u0442\u0435 CMS \u043f\u0440\u0438 \u0438\u0445 \u0432\u043e\u0437\u043d\u0438\u043a\u043d\u043e\u0432\u0435\u043d\u0438\u0438.                    \n\u041a\u043e\u043d\u0441\u0443\u043b\u044c\u0442\u0430\u0446\u0438\u044f \u0441\u043e\u0442\u0440\u0443\u0434\u043d\u0438\u043a\u043e\u0432 \u0438 \u0434\u0440\u0443\u0433\u0438\u0435 \u043d\u0435\u0431\u043e\u043b\u044c\u0448\u0438\u0435 \u0442\u0435\u0445\u043d\u0438\u0447\u0435\u0441\u043a\u0438\u0435 \u0437\u0430\u0434\u0430\u0447\u0438:                    \n\u2022 \u0421\u043e\u0437\u0434\u0430\u043d\u0438\u0435 \u043f\u043e\u0447\u0442\u043e\u0432\u044b\u0445 \u0430\u043a\u043a\u0430\u0443\u043d\u0442\u043e\u0432, \u0442\u0430\u0431\u043b\u0438\u0446 \u0432 Google Docs \u0438 \u0442.\u043f.                    \n\u2022 \u041a\u043e\u043d\u0441\u0443\u043b\u044c\u0442\u0430\u0446\u0438\u044f \u043f\u043e \u0432\u043e\u043f\u0440\u043e\u0441\u0430\u043c \u0443\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0438 \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u043c, \u0431\u0440\u0430\u0443\u0437\u0435\u0440\u043e\u0432, \u0440\u0430\u0431\u043e\u0442\u043e\u0439 \u0441 CMS.                    \n\u2022 \u0420\u0435\u043a\u043e\u043c\u0435\u043d\u0434\u0430\u0446\u0438\u0438 \u043f\u043e \u043f\u043e\u0432\u044b\u0448\u0435\u043d\u0438\u044e \u044e\u0437\u0430\u0431\u0438\u043b\u0438\u0442\u0438 \u0441\u0430\u0439\u0442\u043e\u0432.                    \n\u2022 \u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0430 \u043e\u0433\u0440\u0430\u043d\u0438\u0447\u0435\u043d\u043d\u044b\u0445 \u0434\u043e\u0441\u0442\u0443\u043f\u043e\u0432 \u043a \u0424\u0422\u041f \u0434\u043b\u044f \u0441\u043e\u0442\u0440\u0443\u0434\u043d\u0438\u043a\u043e\u0432.                    \n\n\u0412\u0435\u0434\u0435\u043d\u0438\u0435 \u043f\u0440\u043e\u0435\u043a\u0442\u043e\u0432 \u043f\u043e \u0434\u043e\u0440\u0430\u0431\u043e\u0442\u043a\u0430\u043c \u043d\u0430 \u0441\u0430\u0439\u0442\u044b \u0438 \u0434\u0440\u0443\u0433\u0438\u043c \u043f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\u043d\u044b\u043c \u043f\u0440\u043e\u0434\u0443\u043a\u0442\u0430\u043c:                    \n\u2022 \u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0430 XML \u043f\u043e\u0434 \u0442\u0440\u0435\u0431\u0443\u0435\u043c\u044b\u0435 \u0444\u043e\u0440\u043c\u0430\u0442\u044b \u043f\u043b\u043e\u0449\u0430\u0434\u043e\u043a.                    \n\u2022 \u0420\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0430 \u043f\u0440\u043e\u0441\u0442\u043e\u0439 \u0441\u0438\u0441\u0442\u0435\u043c\u044b \u0445\u0440\u0430\u043d\u0435\u043d\u0438\u044f \u0438 \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u043d\u0438\u044f \u043a\u043e\u043d\u0442\u0430\u043a\u0442\u043e\u0432.                    \n\u2022 \u041f\u0440\u043e\u0433\u0440\u0430\u043c\u043c\u0430 \u0434\u043b\u044f \u0443\u0434\u043e\u0431\u043d\u043e\u0439 \u0432\u044b\u0433\u0440\u0443\u0437\u043a\u0438 \u0432\u0441\u0435\u0445 \u043f\u043e\u0437\u0438\u0446\u0438\u0439 \u043d\u0430 \u0441\u0430\u0439\u0442\u0435 \u0438 \u0442\u0435\u0445, \u043a\u043e\u0442\u043e\u0440\u044b\u0435 \u0432\u044b\u0433\u0440\u0443\u0436\u0430\u044e\u0442\u0441\u044f \u0432 YML \u043f\u0440\u0430\u0439\u0441.                    \n\u2022 \u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0430 \u043e\u043f\u043e\u0432\u0435\u0449\u0435\u043d\u0438\u0439 \u043e\u0431 \u043e\u0442\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u0438\/\u0432\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u0438 \u043f\u043e\u0437\u0438\u0446\u0438\u0439 \u0432 YML.                    \n\u2022 \u041f\u0440\u0438 \u0437\u0430\u043a\u0430\u0437\u0435 \u0447\u0435\u0440\u0435\u0437 \u043a\u043e\u0440\u0437\u0438\u043d\u0443 \u0434\u043e\u0431\u0430\u0432\u0438\u0442\u044c \u043e\u043f\u0446\u0438\u044e \u043f\u0440\u0438\u043a\u0440\u0435\u043f\u0438\u0442\u044c \u0440\u0435\u043a\u0432\u0438\u0437\u0438\u0442\u044b.                    \n\u2022 \u0414\u0440\u0443\u0433\u0438\u0435 \u0440\u0430\u0437\u043e\u0432\u044b\u0435 \u043f\u0440\u043e\u0435\u043a\u0442\u044b \u0438 \u0437\u0430\u0434\u0430\u0447\u0438.                    \n\n\u0422\u0440\u0435\u0431\u043e\u0432\u0430\u043d\u0438\u044f:                    \n\u2022 \u0417\u043d\u0430\u043d\u0438\u044f \u0438 \u0433\u043e\u0442\u043e\u0432\u043d\u043e\u0441\u0442\u044c \u0438\u0437\u0443\u0447\u0430\u0442\u044c \u0440\u0430\u0437\u043b\u0438\u0447\u043d\u044b\u0435 CMS.                    \n\u2022 \u041e\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0435\u043d\u043d\u043e\u0441\u0442\u044c \u0438 \u0438\u0441\u043f\u043e\u043b\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u044c.                    \n\u2022 \u041f\u043e\u0441\u0442\u043e\u044f\u043d\u043d\u043e \u043d\u0430 \u0441\u0432\u044f\u0437\u0438 (\u0442\u0435\u043b\u0435\u0444\u043e\u043d, \u043f\u043e\u0447\u0442\u0430, Icq).                    \n\u2022 \u041e\u043f\u0435\u0440\u0430\u0442\u0438\u0432\u043d\u043e\u0435 \u0440\u0435\u0430\u0433\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435 \u043d\u0430 \u0432\u043d\u043e\u0432\u044c \u043f\u043e\u0441\u0442\u0430\u0432\u043b\u0435\u043d\u043d\u044b\u0435 \u0437\u0430\u0434\u0430\u0447\u0438 \u0438 \u0447\u0435\u0442\u043a\u0430\u044f \u043e\u0431\u0440\u0430\u0442\u043d\u0430\u044f \u0441\u0432\u044f\u0437\u044c.                    \n\u2022 \u0412\u043e\u0437\u043c\u043e\u0436\u043d\u043e\u0441\u0442\u044c \u0432 \u0440\u0430\u0431\u043e\u0447\u0435\u0435 \u0432\u0440\u0435\u043c\u044f \u0432\u043d\u0435\u0441\u0442\u0438 \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f \u043d\u0430 \u0441\u0430\u0439\u0442\u044b, \u0438 \u0443\u0441\u0442\u0440\u0430\u043d\u0435\u043d\u0438\u0435 \u043d\u0435\u043f\u043e\u043b\u0430\u0434\u043e\u043a.                    \n\u2022 \u0416\u0435\u043b\u0430\u043d\u0438\u0435 \u043e\u0431\u0443\u0447\u0430\u0442\u044c\u0441\u044f.                    \n\n\u0423\u0441\u043b\u043e\u0432\u0438\u044f:                    \n\u2022 \u0423\u0434\u0430\u043b\u0435\u043d\u043d\u0430\u044f \u0440\u0430\u0431\u043e\u0442\u0430.                    \n\u2022 \u041e\u043f\u043b\u0430\u0442\u0430 \u043f\u043e \u0447\u0430\u0441\u0430\u043c \u2013 230 \u0440\u0443\u0431\u043b\u0435\u0439 \u0432 \u0447\u0430\u0441","icon":"http:\/\/free-lance.ru\/favicon.ico","site":"free-lance.ru"},{"href":"http:\/\/www.weblancer.net\/projects\/302945.html","weight":31,"rate":0,"title":"\u0412\u043d\u0435\u0441\u0435\u043d\u0438\u0435 \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u0439 \u0432 \u0434\u0438\u0437\u0430\u0439\u043d \u0441\u0430\u0439\u0442\u0430","date":"11\/10\/2011 15:40:56","content":"\u041a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u044f: <a href=\"http:\/\/www.weblancer.net\/projects\/?category_id=9\">\u0414\u0438\u0437\u0430\u0439\u043d \u0441\u0430\u0439\u0442\u043e\u0432<\/a><br>\u0411\u044e\u0434\u0436\u0435\u0442: <b>?<\/b><br><br>\u041d\u0435\u043e\u0431\u0445\u043e\u0434\u0438\u043c\u043e \u043f\u0435\u0440\u0435\u0440\u0430\u0431\u043e\u0442\u0430\u0442\u044c \u0434\u0438\u0437\u0430\u0439\u043d \u0441\u0430\u0439\u0442\u0430.<br>\n1.\u041e\u0442\u043e\u0431\u0440\u0430\u0437\u0438\u0442\u044c \u0432\u043d\u0438\u0437\u0443 \u0441\u0430\u0439\u0442\u0430 (\u0432 \u043f\u043e\u0434\u0432\u0430\u043b\u0435) \u043a\u043d\u043e\u043f\u043a\u0438 \u0441\u043e\u0446\u0438\u0430\u043b\u044c\u043d\u044b\u0445 \u0441\u0435\u0442\u0435\u0439 (vkontakte, facebook, twitter). <br>\n2.\u0412 \u043f\u043e\u0434\u0432\u0430\u043b\u0435 \u0441\u0430\u0439\u0442\u0430 \u043e\u0442\u043e\u0431\u0440\u0430\u0437\u0438\u0442\u044c \u043a\u043e\u043f\u0438\u0440\u0430\u0439\u0442 (copyright <span>***<\/span>) \u0438 \u043d\u0430\u043f\u0438\u0441\u0430\u0442\u044c \u00ab\u0420\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0430 \u0430\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0437\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0445 \u0441\u0438\u0441\u0442\u0435\u043c \u0443\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u044f\u00bb. <br>\n3.\u0412 \u043f\u0440\u0430\u0432\u043e\u0439 \u0447\u0430\u0441\u0442\u0438 \u0441\u0430\u0439\u0442\u0430 \u043f\u0435\u0440\u0435\u0438\u043c\u0435\u043d\u043e\u0432\u0430\u0442\u044c \u0437\u0430\u0433\u043e\u043b\u043e\u0432\u043e\u043a \u00ab\u041d\u0410\u0428\u0418 \u041d\u0410\u041f\u0420\u0410\u0412\u041b\u0415\u041d\u0418\u042f\u00bb \u043d\u0430 \u00ab\u0423\u0421\u041b\u0423\u0413\u0418\u00bb<br>\n4.\u041d\u0438\u0436\u0435 \u0434\u043e\u0431\u0430\u0432\u0438\u0442\u044c \u0437\u0430\u0433\u043e\u043b\u043e\u0432\u043e\u043a \u00ab\u0413\u041e\u0422\u041e\u0412\u042b\u0415 \u0420\u0415\u0428\u0415\u041d\u0418\u042f\u00bb \u043f\u043e\u0434 \u0437\u0430\u0433\u043e\u043b\u043e\u0432\u043a\u043e\u043c \u043e\u0442\u043e\u0431\u0440\u0430\u0437\u0438\u0442\u044c \u0434\u0438\u043d\u0430\u043c\u0438\u0447\u043d\u044b\u0439 (\u0441 \u043f\u0440\u043e\u043a\u0440\u0443\u0442\u043a\u043e\u0439) \u0431\u043b\u043e\u043a \u0441 \u0442\u0440\u0435\u043c\u044f \u043f\u043e\u0441\u043b\u0435\u0434\u043d\u0438\u043c\u0438 \u0433\u043e\u0442\u043e\u0432\u044b\u043c\u0438 \u0440\u0435\u0448\u0435\u043d\u0438\u044f\u043c\u0438.<br>\n5.\u041f\u043e\u0434 \u0440\u0430\u0437\u0434\u0435\u043b\u043e\u043c \u00ab\u0423\u0421\u041b\u0423\u0413\u0418\u00bb \u0438 \u00ab\u0413\u041e\u0422\u041e\u0412\u042b\u0415 \u0420\u0415\u0428\u0415\u041d\u0418\u042f\u00bb \u043e\u0442\u043e\u0431\u0440\u0430\u0437\u0438\u0442\u044c \u0441\u0441\u044b\u043b\u043a\u0443 \u00ab\u0432\u0441\u0435 \u0443\u0441\u043b\u0443\u0433\u0438\u00bb\/\u00bb\u0432\u0441\u0435 \u0440\u0435\u0448\u0435\u043d\u0438\u044f\u00bb \u0441 \u0442\u0435\u043c\u0430\u0442\u0438\u0447\u043d\u043e\u0439 \u0438\u043a\u043e\u043d\u043a\u043e\u0439. <br>\n6.\u0421\u043e\u0437\u0434\u0430\u0442\u044c \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0443 \u0434\u043b\u044f \u0440\u0430\u0437\u0434\u0435\u043b\u0430 \u0423\u0441\u043b\u0443\u0433\u0438. \u041d\u0430 \u043d\u0435\u0439 \u043d\u0435\u043e\u0431\u0445\u043e\u0434\u0438\u043c\u043e \u043e\u0442\u043e\u0431\u0440\u0430\u0437\u0438\u0442\u044c \u0441\u043f\u0438\u0441\u043e\u043a \u0443\u0441\u043b\u0443\u0433 \u043f\u043e\u0434\u043e\u0431\u043d\u043e \u0442\u043e\u043c\u0443, \u043a\u0430\u043a \u043e\u0442\u043e\u0431\u0440\u0430\u0436\u0430\u044e\u0442\u0441\u044f \u043d\u043e\u0432\u043e\u0441\u0442\u0438 news.yandex.ru\/index.html (\u0441\u043b\u0435\u0432\u0430 \u0444\u043e\u0442\u043e, \u0441\u043f\u0440\u0430\u0432\u0430 \u0437\u0430\u0433\u043e\u043b\u043e\u0432\u043e\u043a \u0438 \u043a\u0440\u0430\u0442\u043a\u043e\u0435 \u043e\u043f\u0438\u0441\u0430\u043d\u0438\u0435). \u041d\u0438\u0436\u0435 \u0441\u043f\u0438\u0441\u043a\u0430 \u043e\u0442\u043e\u0431\u0440\u0430\u0437\u0438\u0442\u044c \u0440\u0435\u043a\u043b\u0430\u043c\u043d\u044b\u0439 \u0431\u043b\u043e\u043a, \u043f\u043e\u0434\u043e\u0431\u043d\u044b\u0439 \u0442\u043e\u043c\u0443, \u043a\u043e\u0442\u043e\u0440\u044b\u0439 \u0438\u0441\u043f\u043e\u043b\u044c\u0437\u0443\u0435\u0442\u0441\u044f \u043d\u0430 \u0433\u043b\u0430\u0432\u043d\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435 \u0441\u0430\u0439\u0442\u0430 \u0441 \u043b\u0430\u043c\u043f\u043e\u0447\u043a\u043e\u0439.<br>\n7.\u0421\u043e\u0437\u0434\u0430\u0442\u044c \u043f\u0443\u043d\u043a\u0442 \u0432 \u0433\u043b\u0430\u0432\u043d\u043e\u043c \u043c\u0435\u043d\u044e \u00ab\u0413\u043e\u0442\u043e\u0432\u044b\u0435 \u0440\u0435\u0448\u0435\u043d\u0438\u044f\u00bb, \u043a\u043e\u0442\u043e\u0440\u044b\u0439 \u043e\u0444\u043e\u0440\u043c\u0438\u0442\u044c \u0430\u043d\u0430\u043b\u043e\u0433\u0438\u0447\u043d\u043e \u0440\u0430\u0437\u0434\u0435\u043b\u0443 \u00ab\u0423\u0441\u043b\u0443\u0433\u0438\u00bb (\u0444\u043e\u0442\u043e, \u0437\u0430\u0433\u043e\u043b\u043e\u0432\u043e\u043a \u0438 \u043e\u043f\u0438\u0441\u0430\u043d\u0438\u0435)<br>\n\u2022\u0422\u0430\u043a\u0436\u0435 \u043d\u0435\u043e\u0431\u0445\u043e\u0434\u0438\u043c\u043e \u0441\u043e\u0437\u0434\u0430\u0442\u044c \u0438\u043a\u043e\u043d\u043a\u0438 \u0434\u043b\u044f \u0443\u0441\u043b\u0443\u0433, \u0430\u043d\u0430\u043b\u043e\u0433\u0438\u0447\u043d\u043e \u0438\u043c\u0435\u044e\u0449\u0438\u043c\u0441\u044f \u0438\u043a\u043e\u043d\u043a\u0430\u043c: \u00ab\u0421\u043e\u0437\u0434\u0430\u043d\u0438\u0435 \u0432\u0435\u0431-\u0441\u0430\u0439\u0442\u043e\u0432\u00bb, \u00ab\u0421\u043e\u0437\u0434\u0430\u043d\u0438\u0435 \u0444\u0438\u0440\u043c\u0435\u043d\u043d\u043e\u0433\u043e \u0441\u0442\u0438\u043b\u044f\u00bb.<br>\n\u041f\u0435\u0440\u0435\u0447\u0435\u043d\u044c \u0438\u043a\u043e\u043d\u043e\u043a:<br>\n-\u0421\u043e\u0437\u0434\u0430\u043d\u0438\u0435 \u043f\u0440\u0435\u0437\u0435\u043d\u0442\u0430\u0446\u0438\u0439<br>\n-\u0421\u0438\u043d\u0445\u0440\u043e\u043d\u0438\u0437\u0430\u0446\u0438\u044f \u0441 1C<br>\n-\u041f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0430 \u0432\u0435\u0431-\u0441\u0430\u0439\u0442\u043e\u0432<br>\n-\u0420\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0430 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0439 \u0434\u043b\u044f \u0441\u043e\u0446. \u0441\u0435\u0442\u0435\u0439<br>\n-\u041a\u043e\u043d\u0441\u0443\u043b\u044c\u0442\u0430\u0446\u0438\u043e\u043d\u043d\u0430\u044f \u043f\u043e\u0434\u0434\u0435\u0440\u0436\u043a\u0430<br>\n-\u0420\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0430 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u0439 \u0434\u043b\u044f Iphone, ipad \u0438 Android<br>\n8.\u0412 \u043b\u043e\u0433\u043e\u0442\u0438\u043f\u0435 \u0437\u0430\u043c\u0435\u043d\u0438\u0442\u044c \u00ab\u0441\u043e\u0437\u0434\u0430\u043d\u0438\u0435 \u0438 \u043f\u0440\u043e\u0434\u0432\u0438\u0436\u0435\u043d\u0438\u0435 \u0432\u0435\u0431-\u043f\u0440\u043e\u0435\u043a\u0442\u043e\u0432\u00bb \u043d\u0430 \u00ab\u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0430 \u0430\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0437\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0445 \u0441\u0438\u0441\u0442\u0435\u043c \u0443\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u044f.<br>\n9.\u041c\u0430\u043a\u0435\u0442 \u043d\u0435\u043e\u0431\u0445\u043e\u0434\u0438\u043c\u043e \u043f\u0440\u0435\u0434\u043e\u0441\u0442\u0430\u0432\u0438\u0442\u044c \u0432 PSD \u0441 \u0443\u0447\u0435\u0442\u043e\u043c \u0432\u0441\u0435\u0445 \u043e\u0442\u0434\u0435\u043b\u044c\u043d\u044b\u0445 \u0441\u043b\u043e\u0435\u0432 \u0438 hover.","icon":"http:\/\/weblancer.net\/favicon.ico","site":"weblancer.net"},{"href":"http:\/\/www.weblancer.net\/projects\/302802.html","weight":31,"rate":0,"title":"\u0420\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u0430\u0442\u044c 2 \u0441\u0430\u0439\u0442\u0430 \u043d\u0430 ASP.NET 4.0 (\u0421#, MVC)","date":"11\/10\/2011 08:52:52","content":"\u041a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u044f: <a href=\"http:\/\/www.weblancer.net\/projects\/?category_id=58\">\u0421\u043e\u0437\u0434\u0430\u043d\u0438\u0435 \u0441\u0430\u0439\u0442\u043e\u0432 &quot;\u043f\u043e\u0434 \u043a\u043b\u044e\u0447&quot;<\/a><br>\u0411\u044e\u0434\u0436\u0435\u0442: <b>1000 USD<\/b><br><br>\u0420\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u0430\u0442\u044c 2 \u0441\u0430\u0439\u0442\u0430 \u043d\u0430 ASP.NET 4.0 (\u0421#, MVC), Ms sql 2008.<br>\n<br>\n 1. \u0420\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u0430\u0442\u044c \u0422\u0417 \u0438 \u0443\u0434\u043e\u0431\u043d\u0443\u044e CMS (\u043d\u0430 MVC Framework ,C#) \u0434\u043b\u044f \u043e\u0431\u0441\u043b\u0443\u0436\u0438\u0432\u0430\u043d\u0438\u044f \u0441\u0430\u0439\u0442\u0430 \u043a\u043e\u043c\u043f\u0430\u043d\u0438\u0438 \u0441 \u0432\u0441\u0442\u0440\u043e\u0435\u043d\u043d\u044b\u043c  \u0438\u043d\u0442\u0435\u0440\u043d\u0435\u0442-\u043c\u0430\u0433\u0430\u0437\u0438\u043d\u043e\u043c (\u0432 \u0442.\u0447. \u0432\u043e\u0437\u043c\u043e\u0436\u043d\u043e \u043f\u0440\u0438\u043e\u0431\u0440\u0435\u0442\u0435\u043d\u0438\u0435 \u0433\u043e\u0442\u043e\u0432\u043e\u0433\u043e \u043f\u0440\u043e\u0434\u0443\u043a\u0442\u0430).<br>\n<br>\n2. \u0421 \u043f\u043e\u043c\u043e\u0449\u044c\u044e \u044d\u0442\u043e\u0439 CMS \u0441\u043e\u0437\u0434\u0430\u0442\u044c \u0434\u0432\u0430 \u043a\u043e\u0440\u043f\u043e\u0440\u0430\u0442\u0438\u0432\u043d\u044b\u0445 \u0441\u0430\u0439\u0442\u0430 (\u0434\u0438\u0437\u0430\u0439\u043d \u0431\u0443\u0434\u0435\u0442 \u0431\u0440\u0430\u0442\u044c\u0441\u044f \u0441 free-css.com):<br>\n-\u0441\u0430\u0439\u0442-1 (<a href=\"http:\/\/www.optogan.com\" rel=\"nofollow\">www.optogan.com<\/a>)  <br>\n-\u0441\u0430\u0439\u0442-2 (<a href=\"http:\/\/www.epkgroup.ru\" rel=\"nofollow\">www.epkgroup.ru<\/a>)<br>\n<br>\n----------<br>\n<br>\n\u0422\u0440\u0435\u0431\u043e\u0432\u0430\u043d\u0438\u044f \u043a CMS:<br>\n<br>\n1. SEO \u2013 \u043e\u0440\u0438\u0435\u043d\u0442\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u0430\u044f (\u0442.\u0435. \u0432\u043e\u0437\u043c\u043e\u0436\u043d\u043e\u0441\u0442\u044c \u043d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438 Title, Description, Robots,Keywords \u0434\u043b\u044f \u043a\u0430\u0436\u0434\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u044b, \u0433\u0435\u043d\u0435\u0440\u0430\u0446\u0438\u044f \u043a\u0430\u0440\u0442\u044b \u0441\u0430\u0439\u0442\u0430 \u0438 \u0442.\u0434.)<br>\n<br>\n2. \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \u0438 \u0430\u043d\u0433\u043b\u0438\u0439\u0441\u043a\u0438\u0439 \u044f\u0437\u044b\u043a\u0438 \u0434\u043b\u044f FrontEnd<br>\n<br>\n\u041f\u043e\u0441\u043b\u0435 \u0441\u0434\u0430\u0447\u0438 \u0432 \u044d\u043a\u0441\u043f\u043b\u0443\u0430\u0442\u0430\u0446\u0438\u044e \u044d\u0442\u0438\u0445 \u043f\u0440\u043e\u0435\u043a\u0442\u043e\u0432 \u0431\u0443\u0434\u0435\u043c \u0441\u043e\u0437\u0434\u0430\u0432\u0430\u0442\u044c \u043a\u043e\u043f\u0438\u0438 \u0430\u043d\u0430\u043b\u043e\u0433\u0438\u0447\u043d\u044b\u0445 \u043f\u043e \u0444\u0443\u043d\u043a\u0446\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u043e\u0441\u0442\u0438 \u0441\u0430\u0439\u0442\u043e\u0432 \u0438\u0437 \u0440\u0430\u0441\u0447\u0435\u0442\u0430 <span>***<\/span> \u0434\u043e\u043b\u043b\u0430\u0440\u043e\u0432 \u0437\u0430 \u0441\u0430\u0439\u0442.<br>\n<br>\n\u041f\u0440\u043e\u0448\u0443 \u0443\u043a\u0430\u0437\u044b\u0432\u0430\u0442\u044c \u0446\u0435\u043d\u0443 \u0438 \u0441\u0440\u043e\u043a\u0438<br>\n<br>\n\u0423\u0441\u0442\u0440\u0430\u0438\u0432\u0430\u0435\u0442 \u043b\u044e\u0431\u043e\u0439 \u0432\u0430\u0440\u0438\u0430\u043d\u0442 \u043e\u043f\u043b\u0430\u0442\u044b \u0438\u0441\u043a\u043b\u044e\u0447\u0430\u044e\u0449\u0438\u0439 \u043e\u0431\u043c\u0430\u043d.","icon":"http:\/\/weblancer.net\/favicon.ico","site":"weblancer.net"}];
       
 <?php
   /*
@@ -84,147 +82,125 @@
     <?php
    */
 ?>
-      
-      
-      
-  $(function () {
-
-      var AppState = Backbone.Model.extend({
-          defaults: {
-              username: "",
-              state: "start"
-          }
-      });
-
-      var appState = new AppState();
-
-
-      var Feed = Backbone.Model.extend({ // Модель пользователя
-          defaults: {
-              "href": "",
-              "weight": 0/*,
-          "rate": "",
-          "title": "",
-          "date": "",
-          "content": "",
-          "icon": "",
-          "site": ""*/
-          }
-      });
-      var FeedList = Backbone.Collection.extend({ // Коллекция пользователей
-
-          model: Feed,
-          checkUser: function (username) { // Проверка пользователя
-              var findResult = this.find(function (user) { return user.get("Name") == username })
-              return findResult != null;
-          }
-      });
-      var MyFeedList = new FeedList(
-      ar
-  );
     
-      //console.log(MyFeedList);
+    /*
+      
+    $(function () {
 
-      var UserNameModel = Backbone.Model.extend({ // Модель пользователя
-          defaults: {
-              "Name": ""
-          }
-      });
+        var AppState = Backbone.Model.extend({
+            defaults: {
+                username: "",
+                state: "start"
+            }
+        });
 
-      var Family = Backbone.Collection.extend({ // Коллекция пользователей
-
-          model: UserNameModel,
-
-          checkUser: function (username) { // Проверка пользователя
-              var findResult = this.find(function (user) { return user.get("Name") == username })
-              return findResult != null;
-          }
-
-      });
-
-      var MyFamily = new Family([ // Моя семья
-          {Name: "Саша" },
-          { Name: "Юля" },
-          { Name: "Елизар" },
-
-      ]);
+        var appState = new AppState();
 
 
+       
+    
+        //console.log(MyFeedList);
 
-      var Controller = Backbone.Router.extend({
-          routes: {
-              "": "start", // Пустой hash-тэг
-              "!/": "start", // Начальная страница
-              "!/success": "success", // Блок удачи
-              "!/error": "error" // Блок ошибки
-          },
+        var UserNameModel = Backbone.Model.extend({ // Модель пользователя
+            defaults: {
+                "Name": ""
+            }
+        });
 
-          start: function () {
-              appState.set({ state: "start" });
-          },
+        var Family = Backbone.Collection.extend({ // Коллекция пользователей
 
-          success: function () {
-              appState.set({ state: "success" });
-          },
+            model: UserNameModel,
 
-          error: function () {
-              appState.set({ state: "error" });
-          }
-      });
+            checkUser: function (username) { // Проверка пользователя
+                var findResult = this.find(function (user) { return user.get("Name") == username })
+                return findResult != null;
+            }
 
-      var controller = new Controller(); // Создаём контроллер
+        });
 
+        var MyFamily = new Family([ // Моя семья
+            {Name: "Саша" },
+            { Name: "Юля" },
+            { Name: "Елизар" },
 
-      var Block = Backbone.View.extend({
-          el: $("#block"), // DOM элемент widget'а
-
-          templates: { // Шаблоны на разное состояние
-              "start": _.template($('#start').html()),
-              "success": _.template($('#success').html()),
-              "error": _.template($('#error').html())
-          },
-
-          events: {
-              "click input:button": "check" // Обработчик клика на кнопке "Проверить"
-          },
-
-          initialize: function () { // Подписка на событие модели
-              this.model.bind('change', this.render, this);
-          },
-
-          check: function () {
-              var username = this.el.find("input:text").val();
-              var find = MyFamily.checkUser(username); // Проверка имени пользователя
-              appState.set({ // Сохранение имени пользователя и состояния
-                  "state": find ? "success" : "error",
-                  "username": username
-              });
-          },
-
-          render: function () {
-              var state = this.model.get("state");
-              $(this.el).html(this.templates[state](this.model.toJSON()));
-              return this;
-          }
-      });
-
-      var block = new Block({ model: appState }); // создадим объект
-
-      appState.trigger("change"); // Вызовем событие change у модели
-
-      appState.bind("change:state", function () { // подписка на смену состояния для контроллера
-          var state = this.get("state");
-          if (state == "start")
-              controller.navigate("!/", false); // false потому, что нам не надо 
-          // вызывать обработчик у Router
-          else
-              controller.navigate("!/" + state, false);
-      });
-
-      Backbone.history.start();  // Запускаем HTML5 History push    
+        ]);
 
 
-  });
+
+        var Controller = Backbone.Router.extend({
+            routes: {
+                "": "start", // Пустой hash-тэг
+                "!/": "start", // Начальная страница
+                "!/success": "success", // Блок удачи
+                "!/error": "error" // Блок ошибки
+            },
+
+            start: function () {
+                appState.set({ state: "start" });
+            },
+
+            success: function () {
+                appState.set({ state: "success" });
+            },
+
+            error: function () {
+                appState.set({ state: "error" });
+            }
+        });
+
+        var controller = new Controller(); // Создаём контроллер
+
+
+        var Block = Backbone.View.extend({
+            el: $("#block"), // DOM элемент widget'а
+
+            templates: { // Шаблоны на разное состояние
+                "start": _.template($('#start').html()),
+                "success": _.template($('#success').html()),
+                "error": _.template($('#error').html())
+            },
+
+            events: {
+                "click input:button": "check" // Обработчик клика на кнопке "Проверить"
+            },
+
+            initialize: function () { // Подписка на событие модели
+                this.model.bind('change', this.render, this);
+            },
+
+            check: function () {
+                var username = this.el.find("input:text").val();
+                var find = MyFamily.checkUser(username); // Проверка имени пользователя
+                appState.set({ // Сохранение имени пользователя и состояния
+                    "state": find ? "success" : "error",
+                    "username": username
+                });
+            },
+
+            render: function () {
+                var state = this.model.get("state");
+                $(this.el).html(this.templates[state](this.model.toJSON()));
+                return this;
+            }
+        });
+
+        var block = new Block({ model: appState }); // создадим объект
+
+        appState.trigger("change"); // Вызовем событие change у модели
+
+        appState.bind("change:state", function () { // подписка на смену состояния для контроллера
+            var state = this.get("state");
+            if (state == "start")
+                controller.navigate("!/", false); // false потому, что нам не надо 
+            // вызывать обработчик у Router
+            else
+                controller.navigate("!/" + state, false);
+        });
+
+        Backbone.history.start();  // Запускаем HTML5 History push    
+
+
+    });*/
     
 </script>
 
@@ -235,95 +211,98 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <title>Backbone Demo: Todos</title>
-    <link href="http://documentcloud.github.com/backbone/examples/todos/todos.css" media="all" rel="stylesheet" type="text/css"/>
-    <script src="http://documentcloud.github.com/backbone/test/vendor/json2.js"></script>
-    <script src="http://documentcloud.github.com/backbone/test/vendor/jquery-1.5.js"></script>
-    <script src="http://documentcloud.github.com/backbone/test/vendor/underscore-1.1.6.js"></script>
-    <script src="http://documentcloud.github.com/backbone/backbone.js"></script>
-    <script src="http://documentcloud.github.com/backbone/examples/backbone-localstorage.js"></script>
-    <script src="http://documentcloud.github.com/backbone/examples/todos/todos.js"></script>
-  </head>
+    <head>
+        <title>Backbone Demo: Todos</title>
+        <link href="http://documentcloud.github.com/backbone/examples/todos/todos.css" media="all" rel="stylesheet" type="text/css"/>
+        <script src="http://documentcloud.github.com/backbone/test/vendor/json2.js"></script>
+        <script src="http://documentcloud.github.com/backbone/test/vendor/jquery-1.5.js"></script>
+        <script src="http://documentcloud.github.com/backbone/test/vendor/underscore-1.1.6.js"></script>
+        <script src="http://documentcloud.github.com/backbone/backbone.js"></script>
+        <script src="http://documentcloud.github.com/backbone/examples/backbone-localstorage.js"></script>
+        <script src="todos.js"></script>
+    </head>
 
-  <body>
+    <body>
 
-    <!-- Todo App Interface -->
+        <!-- Todo App Interface -->
 
-    <div id="todoapp">
+        <div id="todoapp">
 
-      <div class="title">
-        <h1>Todos</h1>
-      </div>
+            <div class="title">
+                <h1>Todos</h1>
+            </div>
 
-      <div class="content">
+            <div class="content">
 
-        <div id="create-todo">
-          <input id="new-todo" placeholder="What needs to be done?" type="text" />
-          <span class="ui-tooltip-top" style="display:none;">Press Enter to save this task</span>
+                <div id="create-todo">
+                    <input id="new-todo" placeholder="What needs to be done?" type="text" />
+                    <span class="ui-tooltip-top" style="display:none;">Press Enter to save this task</span>
+                </div>
+
+                <div id="todos">
+                    <ul id="todo-list"></ul>
+                </div>
+
+                <div id="todo-stats"></div>
+
+            </div>
+
         </div>
 
-        <div id="todos">
-          <ul id="todo-list"></ul>
-        </div>
 
-        <div id="todo-stats"></div>
 
-      </div>
+        <!-- Templates -->
 
-    </div>
+        <script type="text/template" id="item-template">
+            <!--<div class="todo <%= done ? 'done' : '' %>">
+                <div class="display">
+                    <input class="check" type="checkbox" <%= done ? 'checked="checked"' : '' %> />
+                           <div class="todo-text">empty text</div>
+                    <span class="todo-destroy"></span>
+                </div>
+                <div class="edit">
+                    <input class="todo-input" type="text" value="" />
+                </div>
+            </div>-->
+            <div class="feed">
+                <a href="<%= href %>">
+                    <div class="title"><%= title %></div>
+                </a>
+                <div class="site"><img src="<%= icon %>" /><%= site %></div>
+                <div class="weight">w <%= weight %></div>
+                <div class="date"><%= date %></div>
+                <div class="content"><%= content %></div>
+                <div class="rate"><%= rate %></div> 
+                <div class="changeRate">
+                    <?php
+                      for($i = -5; $i <= 5; $i++){
+                          //if(!$i)
+                            //  continue;
+                        echo "[<span class=\"rateNum rateNum$i\" style=\"color:red;cursor:pointer;\">{$i}</span>]";
+                        
+                      }
+                    ?>
+                </div>
+            </div>
+        </script>
 
-    <ul id="instructions">
-      <li>Double-click to edit a todo.</li>
-      <li><a href="../../docs/todos.html">View the annotated source.</a></li>
-    </ul>
+        <script type="text/template" id="stats-template">
+            <% if (total) { %>
+            <span class="todo-count">
+                <span class="number"><%= remaining %></span>
+                <span class="word"><%= remaining == 1 ? 'item' : 'items' %></span> left.
+            </span>
+            <% } %>
+            <% if (done) { %>
+            <span class="todo-clear">
+                <a href="#">
+                    Clear <span class="number-done"><%= done %></span>
+                    completed <span class="word-done"><%= done == 1 ? 'item' : 'items' %></span>
+                </a>
+            </span>
+            <% } %>
+        </script>
 
-    <div id="credits">
-      Created by
-      <br />
-      <a href="http://jgn.me/">J&eacute;r&ocirc;me Gravel-Niquet</a>
-    </div>
-
-    <!-- Templates -->
-
-    <script type="text/template" id="item-template">
-      <div class="todo <%= done ? 'done' : '' %>">
-        <div class="display">
-          <input class="check" type="checkbox" <%= done ? 'checked="checked"' : '' %> />
-          <div class="todo-text">empty text</div>
-          <span class="todo-destroy"></span>
-        </div>
-        <div class="edit">
-          <input class="todo-input" type="text" value="" />
-        </div>
-      </div>
-      <div class="feed">
-        <div class="display">feed
-          <div class="feed-title">empty title</div>
-        </div>
-        <div class="edit">
-          <input class="todo-input" type="text" value="" />
-        </div>
-      </div>
-    </script>
-
-    <script type="text/template" id="stats-template">
-      <% if (total) { %>
-        <span class="todo-count">tttt
-          <span class="number"><%= remaining %></span>
-          <span class="word"><%= remaining == 1 ? 'item' : 'items' %></span> left.
-        </span>
-      <% } %>
-      <% if (done) { %>
-        <span class="todo-clear">dddd
-          <a href="#">
-            Clear <span class="number-done"><%= done %></span>
-            completed <span class="word-done"><%= done == 1 ? 'item' : 'items' %></span>
-          </a>
-        </span>
-      <% } %>
-    </script>
-
-  </body>
+    </body>
 
 </html>
