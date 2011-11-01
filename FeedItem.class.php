@@ -1,31 +1,9 @@
 <?php
 
-  require_once ('functions.php');
+  require_once ('ilib.php');
+  require_once ('interfaces.php');
 
-  function Array2FeedItem ( $item ) {
-      return new FeedItem( $item );
-  }
-
-  interface IFeedItem {
-
-      public function __construct ( $data );
-
-      public function getId ();
-
-      public function link ();
-
-      public function rate ( int $i );
-
-      public function getStopWords ();
-
-      public function getWordAndCount ();
-
-      public function getWeight ();
-
-      public function radio ();
-  }
-
-  class FeedItem/* extends IFeedItem */ {
+  class FeedItem implements IFeedItem {
 
       private $id;
       private $href;
@@ -33,32 +11,20 @@
       private $content;
       private $published;
       private $updated;
-      private $rate;
-  
-      public function __construct ( $data ) {
-          $this->setFromObj( $data );
-          //$this->data = $data;
-          //return $this->data->summary->content;
-      }
+      private $rating;
+      protected $weight;
 
-      public function setFromJsonObj ( $data ) {
-          $this->id = $data->id;
-          $this->href = $data->alternate[0]->href;
-          $this->title = $data->title;
-          $this->content = $data->summary->content;
-          $this->content = $data->summary->content;
-          $this->published = $data->published;
-          $this->updated = $data->updated;
-          $this->rate = 0;
+      public function __construct ( array $param ) {
+          $paramKeys = array( 'id', 'href', 'title', 'content', 'published', 'updated', 'rating' );
+          foreach ( $paramKeys as $key ) {
+              $this->$key = $param[$key];
+          }
       }
 
       public function getId () {
+
           return substr( $this->id, strlen( 'tag:google.com,2005:reader/item/' ) );
           return $this->id;
-      }
-
-      public function getRate () {
-          return $this->rate;
       }
 
       public function getHref () {
@@ -74,7 +40,7 @@
       }
 
       public function getSite () {
-          return getDomain( $this->getHref() );
+          return domain_from_url( $this->getHref() );
       }
 
       public function getDate () {
@@ -82,98 +48,76 @@
       }
 
       public function getIcon () {
-          return 'http://' . getDomain( $this->getHref() ) . '/favicon.ico';
+          return 'http://' . domain_from_url( $this->getHref() ) . '/favicon.ico';
       }
 
-      static $stopWords = array( );
-      static $freelanceLogo = array(
-          'http://www.free-lance.ru' => 'http://www.free-lance.ru/images/logo.png',
-          'http://www.free-lance.ru' => 'http://www.free-lance.ru/images/logo.png',
-      );
-      static $words = array(
-          array( 'веб-программист', 3 ),
-          array( 'программист', 2 ),
-          array( 'веб', 2 ),
-          array( 'CMS ', 2 ),
-          array( 'Joomla', 2 ),
-          array( 'сайт', 1 ),
-          array( 'веб-студи', 1 ),
-          array( 'сайт', 1 ),
-          array( 'сайт', 1 ),
-          array( 'JS+CSS', 4 ),
-          array( 'Карт', 5 ),
-          array( 'GoogleMap', 5 ),
-          array( 'YandexMap', 5 ),
-          array( 'Map', 4 ),
-          array( 'рерайтеры', 4 ),
-          array( 'Android', 1 ),
-          array( 'рерайтеры', 4 ),
-          array( 'Битрикс', -5 ),
-          array( 'кроссбраузер', 4 ),
-          array( 'XML', 4 ),
-          array( 'JavaScript', 4 ),
-          array( 'JS', 4 ),
-          array( 'MySQL', 2 ),
-          array( 'юзабили', 4 ),
-          array( 'юзабили', 4 ),
-          array( 'статья', -4 ),
-          array( 'статьи', -4 ),
-          array( 'статей', -4 ),
-          array( 'сложные сайты', 5 ),
-          array( 'агрегатор', 5 ),
-      );
-
-      public function getWeight () {
-          $weight = 0;
-          foreach ( self::$words as $word ) {
-              $weight += substr_count( $this->content, $word[0] ) * $word[1];
-          }
-          return $weight;
-      }
-
-      public function getItem ( $id ) {
-          foreach ( $this->items as $item ) {
-              if ( $item->getId() == $id )
-                  return $item;
-          }
-          return NULL;
-      }
-
-      public function clearStopWords ( $content ) {
-          return str_replace( $this->stopWords, ' ', $content );
-      }
-
-      public function getWordAndCount () {
-          $array = array( );
-          $content = $this->clearStopWords( $this->content );
-          $title = $this->clearStopWords( $this->title );
-          $contentArray = explode( ' ', $content );
-          $titleArray = explode( ' ', $title );
-          return $contentArray;
-      }
-
-      public function getRadio ( $name = '' ) {
-          $rateBegin = -5;
-          $rateEnd = 5;
-          if ( !$name ) {
-              $name = 'item_' . $this->getId();
-          }
-          $str = $this->getId() . '<br>';
-          for ( $i = $rateBegin; $i <= $rateEnd; $i++ ) {
-              $str .= '<a href="rate.php/rate=' . $i . '&id=' . $this->getId() . '">[' . $i . ']</a>';
-          }
-          return $str;
-      }
-
+      //need for comparing 
       public function __toString () {
           return $this->getId();
       }
 
-      //public function addItems ( IFeedItem ifi )
+      public function getRating () {
+          return $this->rating;
+      }
+
+      public function isRated () {
+          return $this->rating != 0;
+      }
+
+      public function setRating ( $rating ) {
+          $this->rating = $rating;
+      }
+
+      public function getWeight () {
+          return $this->weight;
+      }
+
+      //породить или не породить вот в чем вопрос
+      //class RatedFeedItem extends FeedItem implements IFeedItem {
+      /**
+       *
+       * @param IFeedAnalyser $feedAnalyser 
+       */
+      public static function canonizeText ( $content ) {
+          //TODO cut emails phone numbers  
+          $content = mb_strtolower( $content, 'UTF-8' );
+          $pattern = "/[^a-zа-я0-9]/ui";
+          return preg_replace( $pattern, ' ', $content );
+          $puntctuation = array( '(', ')', '{', '}', '[', ']', '`', '~', '/', ',', ':', '!', '.', '?', "\n", "\r", "\t", );
+          return ' ' . str_replace( $puntctuation, ' ', $content ) . ' ';
+      }
+
+      public function countWeight ( $feedAnalyser ) {
+          $weight = 0;
+          foreach ( $feedAnalyser->getWordsWeight() as $word => $count ) {
+              $weight += substr_count( $this->getContent(), $word ) * $count;
+          }
+          $this->weight = $weight;
+      }
+
+      public function getWordsCount () {
+          $content = $this->getContent();
+          //var_dump( $content );
+          $content = $this->canonizeText( $content );
+          //var_dump( $content );
+          $keywords = explode( ' ', $content );
+          return array_count_values( $keywords );
+      }
+
+      public function getWordsWeight () {
+          $rating = $this->getRating();
+          if($rating == 0)
+              return array();
+          $keywords = $this->getWordsCount(  );
+          $keywordsCount = count( $keywords );
+          $multiply = $rating / $keywordsCount;
+          return array_multiply( $keywords, $multiply );
+      }
+
   }
 
-  class EditableFeedItem extends FeedItem {
-      
-  }
+  /*
+    class EditableFeedItem extends FeedItem {
 
+    } */
 ?>

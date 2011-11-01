@@ -1,49 +1,29 @@
 <?php
 
-  require_once ('Feed.class.php');
-  require_once ('FeedItem.class.php');
 
-
-  if ( $_POST ) {
-
-      $filename = getFilename( $label );
-      $feed = getFeed( $filename );
-      foreach ( $_POST['items'] as $item ) {
-          $feed->getItemById()->rate( $item['rating'] );
-      }
-
-
-      die();
-  }
-
-  if ( !$_GET['label'] ) {
-      echo '<a href="?label=RusFreelance">RusFreelance</a>';
-      die();
-  }
   $rowPerPage = 30;
-
-  $label = $_GET['label'];
-  $filename = getFilename( $label );
-  $feed = getFeed( $filename );
-  $feed->sort();
-  //var_dump( $feed->items[0]->getWordAndCount() );
   $begin = $_GET['page'] * $rowPerPage;
   $end = ($_GET['page'] + 1) * $rowPerPage; //$item
+  $items = array_values($items);
   for ( $i = $begin; $i < $end; $i++ ) {
-      $item = $feed->items[$i];
+      $item = $items[$i];
       if ( $item === null )
           break;
       $post['href'] = $item->getHref();
-      $post['title'] = "<span style=\"color:red;\">w{$item->getWeight()}</span> ";
-      if ( $item->getRate() )
-          $post['title'] .= "<span style=\"color:blue;\">r{$item->getRate()}</span> ";
+      $post['title'] = "<span style=\"color:red;\">{$item->getWeight()}w</span> ";
+      if ( $item->isRated() )
+          $post['title'] .= "<span style=\"color:blue;\">{$item->getRating()}r</span> ";
       $post['title'] .= "{$item->getTitle()} ";
 
       $post['date'] = date( "d/m/Y H:i:s", $item->getDate() );
       $post['summary'] = $item->getContent();
       $post['authorName'] = "<img src=\"{$item->getIcon()}\" /> {$item->getSite()}";
       $post['authorHref'] = "{$item->getSite()}";
-      $post['actions'] = 'Оценить: '.$item->getRadio();
+      $post['actions'] = 'Оценить: ';
+      for ( $r = -5; $r <= 5; $r++ ) {
+          $link = '?action=rate_feed_item&label=' . $label . '&id=' . $item->getId() . '&rating=' . $r;
+          $post['actions'] .= '<a href="' . $link . '">[' . $r . ']</a> ';
+      }
       $data['content'][] = $post;
       /* echo <<<STR
         <div class="item">
@@ -66,10 +46,10 @@
   }
 
 
-  $endPage = ceil( count( $feed->items ) / $rowPerPage );
+  $endPage = ceil( count( $items ) / $rowPerPage );
   for ( $i = 0; $i < $endPage; $i++ ) {
       $j = $i + 1;
-      $data['sidebar']['Страницы'] .= "<li><a href=\"?page=$i&label=$label\">Страница $j</a> ";
+      $data['sidebar']['Страницы'] .= "<li><a href=\"?action=$action&page=$i\">Страница $j</a> ";
   }
   $data['sidebar']['Страницы'] = '<ul>'.$data['sidebar']['Страницы'].'</ul>';
   require_once ('template.php');

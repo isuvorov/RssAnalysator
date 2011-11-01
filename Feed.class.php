@@ -1,42 +1,59 @@
 <?php
 
-  interface IFeed {
-
-      public function getItems ();
-
-      //public function getItem ( $id );
-
-      public function addItems ( $items );
-
-      public function sort ();
-  }
+  require_once 'interfaces.php';
+  require_once 'FeedItem.class.php';
 
   class Feed implements IFeed {
 
-      public $timestamp;
+      /**
+       * @var FeedItem[string]
+       */
       public $items;
-      public $filename;
 
       public function __construct () {
           $this->timestamp = 0; //time();
           $this->items = array( );
       }
 
-      public function getItems () {
+      //public $filename;
 
-          //TODO PHP53 lambda
+      public function getItems () {
           return $this->items;
       }
 
       public function addItems ( $items ) {
-          $items = array_map( 'Array2FeedItem', $items );
-          $this->items = array_unique( array_merge( $this->items, $items ) );
+          foreach ( $items as $item ) {
+              $this->addItem( $item );
+          }
+          //$this->items = array_unique( array_merge( $this->items, $items ) );
       }
 
-      public function sort () {
-          if ( !function_exists( "cmp" ) ) {
+      public function addItem ( $item ) {
+          $id = $item->getId();
+          if ( isset( $this->items[$id] ) )
+              return false;;
+          $this->items[$id] = $item;
+          return true;
+          //$this->addItems( array( $item ) );
+      }
 
-              function cmp ( FeedItem $a, FeedItem $b ) {
+      /**
+       *
+       * @param string $id
+       * @return IFeedItem 
+       */
+      public function getItem ( $id ) {
+          if ( !isset( $this->items[$id] ) )
+              throw new Exception( 'ID_NOT_FOUND' );
+          return $this->items[$id];
+      }
+
+      //todo возможна перетасовка ключей
+      public function sort () {
+          //TODO PHP53 lambda
+          if ( !function_exists( "cmpIFeedItem" ) ) {
+
+              function cmpIFeedItem ( IFeedItem $a, IFeedItem $b ) {
                   if ( $a->getWeight() == $b->getWeight() ) {
                       return 0;
                   }
@@ -45,29 +62,48 @@
 
           }
 
-          usort( $this->items, "cmp" );
+          uasort( $this->items, "cmpIFeedItem" );
       }
 
-  }
+      /**
+       *
+       * @return type 
+       */
+      public function getWordsWeight () {
+          $array_of_array = array( );
+          foreach ( $this->items as $item ) {
+              /**
+               * @var $item FeedItem
+               */
+              $array = $item->getWordsWeight( $this );
+              if ( $array )
+                  $array_of_array[] = $array;
+          }
+          return array_merge_sum( $array_of_array );
+      }
 
-  class LongFeed extends Feed {
-      
-  }
+      /**
+       * пересчитать вес всех элементов
+       * @param $feedAnalyser   IFeedAnalyser
+       * 
+       */
+      public function countWeight ( $feedAnalyser ) {
+          foreach ( $this->items as &$item ) {
+              $item->countWeight( $feedAnalyser );
+          }
+      }
 
-  function getFilename ( $label, $date = 0 ) {
-      return 'feed_' . $label . '.txt';
-  }
+      public function clearUnratedFeedItems () {
+          foreach ( $this->items as $key => $item ) {
+              /**
+               * @var FeedItem $item
+               */
+              if ( !$item->isRated() ) {
+                  unset( $this->items[$key] );
+              }
+          }
+      }
 
-  function getFeed ( $filename ) {
-      @$content = file_get_contents( $filename );
-      if ( !$content )
-          return new Feed();
-      return unserialize( $content );
-  }
-
-  function setFeed ( $filename, $feed ) {
-      $content = serialize( $feed );
-      file_put_contents( $filename, $content );
   }
 
 ?>

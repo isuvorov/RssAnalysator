@@ -1,10 +1,38 @@
 <?php
 
-  class GoogleReader {
+  require_once 'interfaces.php';
+  require_once 'FeedItem.class.php';
+  define( "GOOGLE_AUTH_URL", 'https://www.google.com/accounts/ClientLogin' );
+  /*
+    interface IGoogleReader {
+
+    public function __construct ( $username, $password );
+
+    public function getAuth ();
+
+    static function getAuthData ( $username, $password );
+
+    public function login ();
+
+    public function getData ( $url );
+
+    static public function getUrl ( $label, $timestamp = 0, $continuation = NULL, $userId = NULL, $json = true );
+
+    public function getResponse ( $label, $timestamp = 0, $continuation = NULL, $userId = NULL, $json = true );
+
+    public function getItems ( $label, $startTimestamp = 0, $limit = 2000 );
+    } */
+
+  class GoogleReader implements IGoogleReader {
 
       private $_username;
       private $_password;
       private $_auth;
+
+      public function __construct ( $username, $password ) {
+          $this->_username = $username;
+          $this->_password = $password;
+      }
 
       public function getAuth () {
           if ( $this->_auth === NULL )
@@ -12,12 +40,7 @@
           return $this->_auth;
       }
 
-      public function __construct ( $username, $password ) {
-          $this->_username = $username;
-          $this->_password = $password;
-      }
-
-      static $authUrl = 'https://www.google.com/accounts/ClientLogin';
+      static $authUrl = GOOGLE_AUTH_URL;
 
       static function getAuthData ( $username, $password ) {
           $loginData = array( );
@@ -54,13 +77,17 @@
       }
 
       public function getData ( $url ) {
+          //FIX clear string
+          //return file_get_contents( 'temp.txt' );
           $auth = $this->getAuth();
           $headers = array( "Authorization:GoogleLogin auth={$auth}" );
           $ch = curl_init();
           curl_setopt( $ch, CURLOPT_RETURNTRANSFER, 1 );
           curl_setopt( $ch, CURLOPT_HTTPHEADER, $headers );
           curl_setopt( $ch, CURLOPT_URL, $url );
-          return curl_exec( $ch );
+          $data = curl_exec( $ch );
+          //file_put_contents( 'temp.txt', $data );
+          return $data;
       }
 
       static public $itemPerPage = 1000;
@@ -85,6 +112,54 @@
       public function getResponse ( $label, $timestamp = 0, $continuation = NULL, $userId = NULL, $json = true ) {
           return $this->getData( self::getUrl( $label, $timestamp, $continuation, $userId, $json ) );
       }
+
+      public function getItems ( $label, $startTimestamp = 0, $limit = 2000 ) {
+          $items = array( );
+          $continuation = 0;
+          $empty = false;
+          while ( !$empty && $limit > 0 ) {
+              $json = $this->getResponse( $label, $startTimestamp, $continuation );
+              $continuation = $obj->continuation;
+              $obj = json_decode( $json );
+              //TODO analyse $obj
+              //var_dump($obj);
+              $empty = count( $obj->items ) == 0;
+              $limit -= count( $obj->items );
+              $items = array_merge( $items, $obj->items );
+          }
+          return $items;
+      }
+
+  }
+
+  //GoogleReader ITEM to FeedItem
+  //FIX stdClass or not
+  function JsonObj2FeedItemArray ( /* stdClass */ $item ) {
+
+      $param = array( );
+      $param['id'] = $item->id;
+      $param['href'] = $item->alternate[0]->href;
+      $param['title'] = $item->title;
+      $param['content'] = $item->summary->content;
+      $param['published'] = $item->published;
+      $param['updated'] = $item->updated;
+      $param['rating'] = 0;
+      return $param;
+  }
+
+  //TODO Когда-нибудь в будущем - Для того чтобы скачивать фиды больше 2000 без таймлимита
+  interface ITaskableGoogleReader extends IGoogleReader {
+
+      public function isTask ();
+
+      public function clearTask ();
+
+      public function setTask ( $task );
+
+      public function doTask ();
+  }
+
+  class TaskableGoogleReader extends GoogleReader implements ITaskableGoogleReader {
 
       private $task;
 
@@ -113,22 +188,6 @@
               $this->clearTask();
       }
 
-      public function getItems ( $label, $startTimestamp = 0, $limit = 2000 ) {
-          $items = array( );
-          $continuation = 0;
-          $empty = false;
-          while ( !$empty && $limit > 0 ) {
-              $json = $this->getResponse( $label, $startTimestamp, $continuation );
-              $continuation = $obj->continuation;
-              $obj = json_decode( $json );
-              $empty = count( $obj->items ) == 0;
-              $limit -= count( $obj->items );
-              $items = array_merge( $items, $obj->items );
-          }
-          return $items;
-      }
-
   }
-
 
 ?>
